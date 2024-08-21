@@ -35,7 +35,13 @@ function add() {
 
   let text = textbox.value;
   let date = datebox.value;
-
+  if(!text){
+    return alert("The text should not be empty!");
+  }
+  if(!date){
+    return alert("The Date should be valid!");
+  }
+  
   textbox.value = "";
   datebox.value = "";
   list.push({ text, date });
